@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  transition: background-color 450ms ease-in-out;
+  height: 100vh;
+  width: 100%;
+  font-size: 14px;
+}
+.appContainer {
+  height: 525px;
+  width: 1310px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#controlPanel {
+  z-index: 99999;
+}
+.modulContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 525px;
+  width: 320px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 25px;
+  padding: 2rem;
+  transition: transform 350ms ease-in-out, left 350ms ease-in-out;
+}
+#instructions {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.containerTitle {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.containerContent {
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.colorCode {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+label {
+  color: #fff;
+  margin-right: -10px;
+  font-size: 18px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+}
+#inputField {
+  border: none;
+  outline: none;
+  width: 90%;
+  font-size: inherit;
+  background-color: transparent;
+  color: #fff !important;
+  padding: 10px;
+}
+.inputContainer {
+  width: 70%;
+  display: inline-block;
+  border-bottom: 1px solid #fff;
+}
+.colorCode p {
+  padding: 0.5rem;
+}
+.colorCodes {
+  padding: 0.5rem;
+  background: #222;
+  border-radius: 5px;
+  -webkit-user-select: all; /* Safari */
+  -ms-user-select: all; /* IE 10+ and Edge */
+  user-select: all; /* Standard syntax */
+}
+.colorCodes {
+  width: 70%;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0px;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 200ms linear;
+}
+.btn:hover {
+  background-color: #222;
+}
+.csColorBlock,
+.csText {
+  height: 65px;
+  width: 60%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  background: #222;
+}
+.csName {
+  -webkit-user-select: all; /* Safari */
+  -ms-user-select: all; /* IE 10+ and Edge */
+  user-select: all; /* Standard syntax */
+}
+.csColorBlock {
+  border: 1px solid #fff;
+  max-width: 35%;
+  transition: background 350ms ease-in-out;
+}
+.colorSchemeRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.csModuleContainer {
+  z-index: -1;
+  opacity: 0;
+  transition: 350ms opacity ease-in-out, 350ms transform ease-in-out,
+    350ms left ease-in-out;
+}
+.activeCs {
+  transform: translate(0%, -50%);
+  left: 330px;
+  opacity: 1;
+}
+.activeAnalogicCs {
+  transform: translate(0%, -50%);
+  left: 660px;
+  opacity: 1;
+}
+.activeAnalogicComplementCs {
+  transform: translate(0%, -50%);
+  left: 990px;
+  opacity: 1;
+}
+.activeCsFlex {
+  transform: translate(0%, -50%);
+  left: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  .modulContainer {
+    width: 80%;
+    max-width: 450px;
+    height: 90%;
+    max-height: 525px;
+  }
+  .csModuleContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .activeCs {
+    transform: translate(-50%, 60%);
+    opacity: 1;
+  }
+  .activeAnalogicCs {
+    transform: translate(-50%, 170%);
+    opacity: 1;
+  }
+  .activeAnalogicComplementCs {
+    transform: translate(-50%, 280%);
+    opacity: 1;
+    margin-bottom: 150px;
+  }
+  .activeCsFlex {
+    transform: translate(-50%, -50%);
+  }
+}

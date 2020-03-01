@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hex Color Generator & Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://i.stack.imgur.com/SBvcU.png">
+  </head>
+  <body>
+    <div class="appContainer">
+      <div class="modulContainer" id="controlPanel">
+        <div class="containerTitle">
+          <h3 id="colorName">Color Name</h3>
+        </div>
+        <div class="containerContent">
+          <p id="instructions">Please insert hex code below:</p>
+          <div class="colorCode">
+            <p>HEX:</p>
+            <div class="inputContainer">
+              <label for="inputField">#</label>
+              <input
+                id="inputField"
+                type="text"
+                autocomplete="off"
+                maxlength="6"
+                placeholder="e.g. fd1234"
+              />
+            </div>
+          </div>
+          <div class="colorCode">
+            <p>CMYK:</p>
+            <span class="colorCodes"></span>
+          </div>
+          <div class="colorCode">
+            <p>RGB:</p>
+            <span class="colorCodes"></span>
+          </div>
+          <div class="colorCode">
+            <p>HSL:</p>
+            <span class="colorCodes"></span>
+          </div>
+          <div class="btnContainer">
+            <div class="btn" id="randomHexBtn">Generate Random Color</div>
+            <div class="btn" id="colorSchemeLink">Show Color Schemes</div>
+          </div>
+        </div>
+      </div> 
+        <div class="modulContainer csModuleContainer" id="monoSchemeContainer">
+          <div class="containerTitle">
+            <h4 id="monoSchemeName">Monochrome Scheme</h4>
+          </div>
+          <div class="containerContent">
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName">Color Name</p>
+        <p class="csValue">#123456</p>
+    </div>
+    <div class="csColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName">Color Name</p>
+        <p class="csValue">#123456</p>
+    </div>
+    <div class="csColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName">Color Name</p>
+        <p class="csValue">#123456</p>
+    </div>
+    <div class="csColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName">Color Name</p>
+        <p class="csValue">#123456</p>
+    </div>
+    <div class="csColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName">Color Name</p>
+        <p class="csValue">#123456</p>
+    </div>
+    <div class="csColorBlock"></div>
+</div>
+</div>
+        </div>
+
+        <div class="modulContainer csModuleContainer" id="analogicSchemeContainer">
+            <div class="containerTitle">
+              <h4 id="analogicSchemeName">Analogic Scheme</h4>
+            </div>
+            <div class="containerContent">
+  <div class="colorSchemeRow">
+      <div class="csText">
+          <p class="csName analogicCsName">Color Name</p>
+          <p class="csValue analogicCsValue">#123456</p>
+      </div>
+      <div class="csColorBlock analogicColorBlock"></div>
+  </div>
+  <div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicCsName">Color Name</p>
+        <p class="csValue analogicCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicCsName">Color Name</p>
+        <p class="csValue analogicCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicCsName">Color Name</p>
+        <p class="csValue analogicCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicCsName">Color Name</p>
+        <p class="csValue analogicCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicColorBlock"></div>
+</div>
+  </div>
+          </div>
+          
+          <div class="modulContainer csModuleContainer" id="analogicComplementSchemeContainer">
+            <div class="containerTitle">
+              <h4 id="analogicComplementSchemeName">Analogic-Complement Scheme</h4>
+            </div>
+            <div class="containerContent">
+  <div class="colorSchemeRow">
+      <div class="csText">
+          <p class="csName analogicComplementCsName">Color Name</p>
+          <p class="csValue analogicComplementCsValue">#123456</p>
+      </div>
+      <div class="csColorBlock analogicComplementColorBlock"></div>
+  </div>
+  <div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicComplementCsName">Color Name</p>
+        <p class="csValue analogicComplementCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicComplementColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicComplementCsName">Color Name</p>
+        <p class="csValue analogicComplementCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicComplementColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicComplementCsName">Color Name</p>
+        <p class="csValue analogicComplementCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicComplementColorBlock"></div>
+</div>
+<div class="colorSchemeRow">
+    <div class="csText">
+        <p class="csName analogicComplementCsName">Color Name</p>
+        <p class="csValue analogicComplementCsValue">#123456</p>
+    </div>
+    <div class="csColorBlock analogicComplementColorBlock"></div>
+</div>
+  </div>
+          </div>
+    
+   
+
+    <script src="app.js"></script>
+  </body>
+</html>
